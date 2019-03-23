@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Puissance_4</title>
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="cascade.css">
+  </head>
+  <body>
+    <div class="container" align="center">
+      <h1>Welcome to Puissance 4!</h1>
+      <h2>The object of this game is to connect four of your chips in a row!</h2>
+      <h3>Let's get started!</h3>
+      <table class="board">
+        <tr>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+        </tr>
+        <tr>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+        </tr>
+        <tr>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+        </tr>
+        <tr>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+        </tr>
+        <tr>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+        </tr>
+        <tr>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+          <td onmouseover="tokenColor(this)" onmouseout="noToken(this)"><button type="button"></button></td>
+        </tr>
+      </table>
+    </div>
+    <div align="center">
+      <br><button onclick="resetgame()">Reset game</button>
+    </div>
+    <div align="center">
+      <h2>Game rules:</h2><br>
+      <p>-There must be 2 players, every player with a different color.</p>
+      <p>-You can't place a piece out of the game dimension.</p>
+      <p>-When a player aligns at least four of his pieces horizontally, vertically, or diagonally, he
+wins the game.</p>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous">
+    </script>
+    <script src='backend.js'></script>
+  </body>
+</html>
